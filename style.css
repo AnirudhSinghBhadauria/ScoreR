@@ -74,6 +74,7 @@ body {
   border-radius: 0.7rem;
   border-end-end-radius: 2.125rem;
   margin-right: 21%;
+  overflow-y: auto;
 }
 #wrapperWrapper {
   border-left: 10px solid #fdc263;
@@ -216,11 +217,10 @@ svg:hover {
 /*----------------------------------Media----------------------------------*/
 @media (max-width: 500px) {
   body {
-    margin: 1.25rem 0rem 1.25rem 0rem;
+    padding: 1.25rem 0rem 1.25rem 0rem;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100%;
   }
   #winner{
     max-width: fit-content;
@@ -233,10 +233,13 @@ svg:hover {
     display: none;
   }
   #wrapper {
-    width: 80%;
-    height: 80%;
-    margin: 0 0 1.1rem 0;
+    max-height: 100vh;
+    max-width: 80%;
+    margin: 2rem 2rem 2rem 2rem;
   }
+#wrapperWrapper {
+  max-height: 100%;
+}
   #btnWrapper {
     flex-direction: column;
   }
@@ -247,6 +250,16 @@ svg:hover {
   }
   .footername{
     font-size: 40px;
+  }
+  #footerDiv{
+    height: 3rem;
+    margin-top: 1rem;
+  }
+  #reset{
+    height: 50%;
+    width: 50%;
+    padding: 0;
+    margin: 0;
   }
   #p1Display::before,
   #p1Display::after,
